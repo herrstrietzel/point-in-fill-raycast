@@ -1,3 +1,5 @@
+# point-in-fill-raycast.js
+
 A standalone library to emulate SVGs API method [`isPointInFill()`](https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/isPointInFill) or Canvas Drawing API method [`isPointInPath()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath?retiredLocale=de). 
 This helper is based on the ray-cast method and works indepentantly from browser APIs - so it runs also in headless environments.
 

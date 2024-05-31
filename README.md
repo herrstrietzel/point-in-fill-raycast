@@ -31,5 +31,5 @@ let pointInPoly = isPointInCompoundPolygon(polygonData, pt);
 * [ray-cast vs canvas `isPointInPath()`](https://codepen.io/herrstrietzel/pen/ExzWgEj)
 
 ## Credits
-* Stackoverflow member **timepp** for providing this excellent ray-cast helper function tha's used for single polygon tests [See answer](["How can I determine whether a 2D Point is within a Polygon?"](https://stackoverflow.com/questions/217578/how-can-i-determine-whether-a-2d-point-is-within-a-polygon#63436180))
+* Stackoverflow member **timepp** for providing this excellent ray-cast helper function tha's used for single polygon tests [See answer: "How can I determine whether a 2D Point is within a Polygon?"](https://stackoverflow.com/questions/217578/how-can-i-determine-whether-a-2d-point-is-within-a-polygon#63436180)
   

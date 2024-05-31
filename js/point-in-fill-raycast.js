@@ -54,8 +54,8 @@ function isPointInCompoundPolygon(compoundPoly, pt) {
 
 /** Get relationship between a point and a polygon using ray-casting algorithm
 * based on timepp's answer
-* https://stackoverflow.com/questions/217578/how-can-i-determine-whether-a-2d-point-is-within-a-polygon?noredirect=1&lq=1
- */
+* https://stackoverflow.com/questions/217578/how-can-i-determine-whether-a-2d-point-is-within-a-polygon#63436180
+*/
 function isPointInPolygon(pt, polygon, bb, skipBB = false) {
     const between = (p, a, b) => (p >= a && p <= b) || (p <= a && p >= b);
     let inside = false;

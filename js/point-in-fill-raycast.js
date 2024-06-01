@@ -47,7 +47,7 @@ function isPointInCompoundPolygon(compoundPoly, pt) {
             pointsInPoly++;
         }
     }
-    return pointsInPoly === 1;
+    return pointsInPoly%2 !== 0;
 }
 
 
@@ -175,11 +175,8 @@ function pathDataToPolygon(pathData, precision = 10) {
                 break;
         }
     })
-
     return polys
-
 }
-
 
 
 function pointAtT(pts, t = 0.5) {

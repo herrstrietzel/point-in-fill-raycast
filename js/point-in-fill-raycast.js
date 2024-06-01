@@ -1,14 +1,12 @@
-
-
 function isPointInPathData(d, pt, precision = 10) {
 
     let pathData, compoundPoly;
 
     //test polygon
-    let hasCurves = (/[C|Q|T|S]/gi).test(d);
+    let hasCurvesOrShorthands = (/[C|Q|T|S|H|V]/gi).test(d);
     let hasRelativeLinetos = (/[l]/g).test(d);
     let hasRelativeMovetos = (/[m]/g).test(d);
-    let isPoly = !hasCurves && !hasRelativeLinetos && !hasRelativeMovetos
+    let isPoly = !hasCurvesOrShorthands && !hasRelativeLinetos && !hasRelativeMovetos
 
 
     if (!isPoly) {
@@ -35,7 +33,7 @@ function isPointInPathData(d, pt, precision = 10) {
             pointsInPoly++;
         }
     }
-    return pointsInPoly === 1;
+    return pointsInPoly%2 !== 0;
 }
 
 
@@ -60,8 +58,8 @@ function isPointInPolygon(pt, polygon, bb, skipBB = false) {
     const between = (p, a, b) => (p >= a && p <= b) || (p <= a && p >= b);
     let inside = false;
 
-    // not in bbox - quit
-    if (!skipBB) {
+    // not in bbox - quit || no bbox defined
+    if (!skipBB || !bb.bottom) {
         if (bb.left > pt.x || bb.top > pt.y || bb.bottom < pt.y || bb.right < pt.x) {
             return false;
         }

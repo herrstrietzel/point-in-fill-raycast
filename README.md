@@ -19,7 +19,7 @@ Precision parameter adds more vertices when approximating Béziers or Arc comman
 let d = path.getAttribute("d");
 let polygonData = pathDataToCompoundPoly(pathData, precision);
 
-let pointInPoly = isPointInCompoundPolygon(polygonData, pt);
+let pointInPoly = isPointInFillCompoundPolygon(polygonData, pt);
 ```
 
 3. Alternatively you can use `isPointInPathData(d, pt, precision = 10)` to directly pass a pathData string.
